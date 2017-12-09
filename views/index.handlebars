@@ -1,0 +1,30 @@
+<h1>AXIOMaker</h1>
+
+<p>Claim/Disclaim Your Axioms!</p>
+
+<ul>
+	{{#each axiomsObj.axioms}}
+		<p>{{this.axiom}}</p>
+		<form action='/api/claim/{{this.id}}' method='get'>
+		<button type="submit" class="claim">CLAIM</button>
+		</form>
+		<form action='/api/disclaim/{{this.id}}' method='get'>
+		<button onclick="disclaimAxiom({{this.id}})" class="disclaim">DISCLAIM</button>
+		</form>
+	{{/each}}
+</ul>
+
+<ul>
+	<h3>CLAIMED</h3>
+		{{#each claimed.axioms}}
+			<p>{{this.axiom}}</p>
+		{{/each}}
+</ul>
+<form action='/api/axiom' method='post' class="create-form">
+	<div class="form-group">
+		<textarea id="axio" name="axiom" rows="8" cols="40"></textarea>
+	</div>
+
+	<button type="submit">Add Potential Axiom</button>
+
+</form>
