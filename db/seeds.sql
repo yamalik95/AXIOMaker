@@ -1,5 +1,5 @@
 USE axioms_db
-INSERT INTO axioms (axiom_text, claimed)
+INSERT INTO axioms (axiom, claimed)
 VALUES 
 ('The ultimate aim is an affirmative claim, in favor of all life.', null),
 ('The Good is what is desired.', null),
