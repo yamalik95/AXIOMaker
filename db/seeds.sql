@@ -1,6 +1,6 @@
-USE burgers_db
-INSERT INTO burgers (burger_name, devoured)
+USE axioms_db
+INSERT INTO axioms (axiom_text, claimed)
 VALUES 
-('Silent Despair', 0),
-('The Death of God', 0),
-('Without Sight', 0);
+('The ultimate aim is an affirmative claim, in favor of all life.', null),
+('The Good is what is desired.', null),
+('The Bad is what is averted.', null);

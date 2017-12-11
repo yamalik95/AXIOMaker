@@ -1,9 +1,9 @@
-CREATE DATABASE burgers_db;
+CREATE DATABASE axioms_db;
 USE burgers_db;
-CREATE TABLE burgers (
+CREATE TABLE axioms (
 	id int NOT NULL AUTO_INCREMENT,
-	burger_name varchar(50),
-	devoured BOOLEAN,
+	axiom_text varchar(50),
+	claimed BOOLEAN,
 	created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY(id)
 );
