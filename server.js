@@ -1,8 +1,9 @@
 var express = require('express')
 var bodyParser = require('body-parser')
 var favicon = require('serve-favicon')
+var path = require('path')
 require('dotenv').config()
-var port = process.env.PORT
+const port = process.env.PORT || 3000
 
 var app = express()
 
