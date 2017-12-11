@@ -9,14 +9,11 @@ router.get('/', function(request, result) {
 	axiom.all(function(res) {
 		axiomObj = {axioms:[]}
 		claimed = {axioms:[]}
-		disclaimed = {axioms:[]}
 		for (var i = 0; i < res.length; i++) {
-			if (res[i].claimed === null) {
+			if (res[i].claimed === null || res[i].claimed === 0) {
 				axiomObj.axioms.push(res[i])
 			} else if (res[i].claimed === 1) {
 				claimed.axioms.push(res[i])
-			} else {
-				disclaimed.axioms.push(res[i])
 			}
 		}
 		console.log(claimed)
