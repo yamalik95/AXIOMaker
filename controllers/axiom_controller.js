@@ -10,13 +10,13 @@ router.get('/', function(request, result) {
 		axiomObj = {axioms:[]}
 		claimed = {axioms:[]}
 		for (var i = 0; i < res.length; i++) {
-			if (res[i].claimed === null || res[i].claimed === 0) {
+			if (res[i].claimed !== 1) {
 				axiomObj.axioms.push(res[i])
-			} else if (res[i].claimed === 1) {
+			} else {
 				claimed.axioms.push(res[i])
 			}
 		}
-		console.log(claimed)
+		console.log(axiomObj)
 		result.render('index', {axiomsObj: axiomObj, claimed: claimed})
 	})
 })
